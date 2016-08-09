@@ -16,8 +16,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  FR_Class, ExtCtrls, TeeProcs, TeEngine, Chart, Series, StdCtrls, FR_Ctrls,
-  ComCtrls, Menus;
+  FR_Class, ExtCtrls, VclTee.TeeGDIPlus, VCLTee.Series, VCLTee.ArrowCha,
+  VCLTee.BubbleCh, VCLTee.TeeShape, VCLTee.TeEngine, VCLTee.TeeProcs, VCLTee.Chart,
+  StdCtrls, FR_Ctrls, ComCtrls, Menus;
 
 type
   TChartOptions = packed record
@@ -169,8 +170,8 @@ var
       s := Copy(s, 2, 255);           // trim all non-digit chars at the begin
     while (Length(s) > 0) and not (s[Length(s)] in ['0'..'9']) do
       s := Copy(s, 1, Length(s) - 1); // trim all non-digit chars at the end
-    while Pos(ThousandSeparator, s) <> 0 do
-      Delete(s, Pos(ThousandSeparator, s), 1);
+    while Pos(FormatSettings.ThousandSeparator, s) <> 0 do
+      Delete(s, Pos(FormatSettings.ThousandSeparator, s), 1);
     Result := 0;
     try
       Result := StrToFloat(s);

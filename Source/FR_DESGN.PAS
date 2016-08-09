@@ -2816,7 +2816,7 @@ begin
            s := E1.Text;
            for j := 1 to Length(s) do
              if s[j] in ['.', ','] then
-               s[j] := DecimalSeparator;
+               s[j] := FormatSettings.DecimalSeparator;
            FrameWidth := StrToFloat(s);
            if t is TfrLineView then
              LastLineWidth := FrameWidth else

@@ -78,7 +78,7 @@ begin
     0, 0, SWP_NOACTIVATE or SWP_NOSIZE or SWP_NOZORDER);
 end;
 
-function ExplorerHook(Wnd: HWnd; Msg: UINT; WParam: WPARAM; LParam: LPARAM): UINT; stdcall;
+function ExplorerHook(Wnd: HWnd; Msg: UINT; WParam: WPARAM; LParam: LPARAM): NativeUint; stdcall;
 var
   s: String[255];
   i: Integer;

@@ -174,7 +174,7 @@ begin
             if s1[1] in ['0'..'9', '.', ','] then
             begin
               for i1 := 1 to Length(s1) do
-                if s1[i1] in ['.', ','] then s1[i1] := DecimalSeparator;
+                if s1[i1] in ['.', ','] then s1[i1] := FormatSettings.DecimalSeparator;
               nm[st] := StrToFloat(s1);
             end
             else

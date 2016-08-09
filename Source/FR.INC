@@ -18,6 +18,8 @@
 {$J+} {- Writeable structured consts }
 {$H+} {- Use long strings by default }
 
+{$DEFINE VER210} // дабы походить на последнюю поддерживаемую версию
+
 {$IFDEF VER90}       // Delphi 2.0
   {$DEFINE Delphi2}
 {$ENDIF}
@@ -75,6 +77,14 @@
   {$DEFINE Delphi10}
   {$WARN UNSAFE_CODE OFF}
 {$ENDIF}
+
+  {$DEFINE Delphi4}
+  {$DEFINE Delphi5}
+  {$DEFINE Delphi6}
+  {$DEFINE Delphi7}
+  {$DEFINE Delphi9}
+  {$DEFINE Delphi10}
+  {$WARN UNSAFE_CODE OFF}
 
 {$IFDEF VER93}       // Borland C++ Builder 1.0
   {$DEFINE Delphi2}

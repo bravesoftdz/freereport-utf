@@ -27,7 +27,7 @@ uses
 type
   TfrBookmark =
 {$IFDEF IBO} type string;
-{$ELSE} type TBookmark;
+{$ELSE} TBookmark;
 {$ENDIF}
 
   TfrTDataSet =
